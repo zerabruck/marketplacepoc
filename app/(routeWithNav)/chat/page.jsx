@@ -6,7 +6,7 @@ import React from 'react'
 const chat = () => {
   return (
     <div>
-      <SideBar>
+      <SideBar path='chats'>
         <Chat/>
       </SideBar>
       

@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function SearchBoxAnimated(props) {
-  let searchList = ['"title"', '"companies"', '"expertise"'];
+  let searchList = ['"name"', '"service"', '"employees"'];
 
   const [index, setIndex] = useState(0);
 
