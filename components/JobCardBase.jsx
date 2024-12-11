@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-
+import LocationOnTwoToneIcon from '@mui/icons-material/LocationOnTwoTone';
 
 export default function JobCardBase(props) {
     return (
@@ -9,14 +9,19 @@ export default function JobCardBase(props) {
                 <div className="h-[100px] w-[150px] rounded-[12px]  flex" style={{ backgroundColor: props.data?.companyDetails?.logoBackground }}>
                     <Image className="items-center justify-center m-auto" src={props.data?.companyDetails?.logo} height={20} width={20} alt="logos" />
                 </div>
-                <div className="flex text-darkGrey font-base mt-4">
-                    <p className="dark:text-darkGrey">{props.data?.postedAt}</p>
+                <p className=" hover:text-darkGrey font-bold mt-4 dark:text-white text-xl">{props.data?.companyDetails?.name}</p>
+                <div className="flex text-darkGrey font-base mt-2">
+                    <p className="dark:text-darkGrey">{props.data?.age}</p>
                     <div className="rounded-full bg-darkGrey h-[4px] w-[4px] mx-4 my-auto" />
-                    <p>{props.data?.contract}</p>
+                    <p>{props.data?.industry}</p>
+                    <div className="rounded-full bg-darkGrey h-[4px] w-[4px] mx-4 my-auto" />
+                    <p>Revenue: {props.data?.estimatedRevenue}</p>
+                    <div className="rounded-full bg-darkGrey h-[4px] w-[4px] mx-4 my-auto" />
+                    <p>{props.data?.noOfEmployees} employees</p>
                 </div>
-                <p className="text-xl hover:text-darkGrey font-bold mt-4 dark:text-white">{props.data?.position}</p>
-                <p className="text-base text-darkGrey mt-4">{props.data?.companyDetails?.name}</p>
-                <p className="text-sm text-lightBlue font-bold mt-6">{props.data?.location}</p>
+                <p className="text-darkGrey font-base text-sm mt-2 ">Worked With: <span className="text-sm hover:text-darkGrey font-bold mt-4 dark:text-white">{props.data?.workedWith}</span></p>
+                <p className="text-sm text-lightBlue font-bold mt-4"><LocationOnTwoToneIcon/>{props.data?.location}</p>
+            
             </Link>
         </div>
     )

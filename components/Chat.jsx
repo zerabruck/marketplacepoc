@@ -12,10 +12,10 @@ const ChatApplication = () => {
     },
     {
       id: 2,
-      sender: "Alice Smith",
+      sender: "Tech Solutions Inc",
+      avatar: "https://devjobs-fs.s3.ap-south-1.amazonaws.com/assets/logos/vector.svg",
       content: "I'm good! How about you?",
       timestamp: "10:31 AM",
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
     }
   ]);
 
@@ -47,8 +47,8 @@ const ChatApplication = () => {
     },
     {
       id: 2,
-      name: "Alice Smith",
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
+      sender: "Tech Solutions Inc",
+      avatar: "https://devjobs-fs.s3.ap-south-1.amazonaws.com/assets/logos/vector.svg",
       status: "online"
     }
   ]);
@@ -118,7 +118,7 @@ const ChatApplication = () => {
                 <img
                   src={user.avatar}
                   alt={user.name}
-                  className="w-10 h-10 rounded-full"
+                  className="w-10 h-10 rounded-full bg-black"
                   onError={(e) => {
                     e.target.src = "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80";
                   }}
@@ -136,17 +136,17 @@ const ChatApplication = () => {
 
       
       {/* Main Chat Area */}
-      <div className="flex-1 flex flex-col">
+      <div className="flex-1 flex flex-col justify-between">
       {!showProposalModal  ?
 
-        <div>
+        <div className="flex flex-col justify-between h-[100vh]">
         <div className="flex-1 overflow-y-auto p-4 space-y-4">
           {messages.map((message) => (
             
               message.isProposal ? 
               <div className="bg-white rounded-lg p-4 shadow-sm">
             <div className="flex justify-between items-center mb-4">
-              <h3 className="text-lg font-bold">Proposal</h3>
+              <h3 className="text-lg font-bold">Offer</h3>
               
             </div>
               <div key={message.id} className="border rounded-lg p-4 space-y-2">
@@ -183,7 +183,7 @@ const ChatApplication = () => {
               <img
                 src={message.avatar}
                 alt={message.sender}
-                className="w-8 h-8 rounded-full"
+                className="w-8 h-8 rounded-full bg-black"
                 onError={(e) => {
                   e.target.src = "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80";
                 }}
@@ -230,7 +230,7 @@ const ChatApplication = () => {
         <div className=" inset-0 w-full ml-auto  bg-opacity-100 bg-gray-100 flex items-center justify-center p-4">
           <div className=" shadow-md bg-white rounded-lg max-w-md w-full p-6">
             <div className="flex justify-between items-center mb-4">
-              <h3 className="text-xl font-bold">Create New Proposal</h3>
+              <h3 className="text-xl font-bold">Create New Offer</h3>
               <button
                 onClick={() => setShowProposalModal(false)}
                 className="p-2 text-gray-500 hover:bg-gray-100 rounded-full"

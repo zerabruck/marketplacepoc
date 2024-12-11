@@ -1,6 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/landing',
+        permanent: false, // Use true for a permanent (301) redirect, false for a temporary (302) redirect
+      },
+    ];
+  },
   async headers() {
     return [
       {

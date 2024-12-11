@@ -62,7 +62,7 @@ const SignInContainer = styled(Stack)(({ theme }) => ({
   },
 }));
 
-export default function SignIn(props) {
+export default function SignUp(props) {
   const [emailError, setEmailError] = React.useState(false);
   const [emailErrorMessage, setEmailErrorMessage] = React.useState('');
   const [passwordError, setPasswordError] = React.useState(false);
@@ -125,7 +125,7 @@ export default function SignIn(props) {
   }
 
   return (
-    <div className=''>
+    <div className="overflow-y-auto">
     <AppTheme {...props}>
       <CssBaseline enableColorScheme />
       <SignInContainer direction="column" justifyContent="space-between">
@@ -136,7 +136,7 @@ export default function SignIn(props) {
             variant="h4"
             sx={{ width: '100%', fontSize: 'clamp(2rem, 10vw, 2.15rem)' }}
           >
-            Sign in
+            Sign up
           </Typography>
           <Box
             component="form"
@@ -149,6 +149,23 @@ export default function SignIn(props) {
               gap: 2,
             }}
           >
+            <FormControl>
+              <FormLabel htmlFor="email">Full Name</FormLabel>
+              <TextField
+                error={emailError}
+                helperText={emailErrorMessage}
+                id="name"
+                type="name"
+                name="name"
+                placeholder="Henery Jones"
+                autoComplete="name"
+                autoFocus
+                required
+                fullWidth
+                variant="outlined"
+                color={emailError ? 'error' : 'primary'}
+              />
+            </FormControl>
             <FormControl>
               <FormLabel htmlFor="email">Email</FormLabel>
               <TextField
@@ -183,11 +200,28 @@ export default function SignIn(props) {
                 color={passwordError ? 'error' : 'primary'}
               />
             </FormControl>
+            <FormControl>
+              <FormLabel htmlFor="password">confirm password</FormLabel>
+              <TextField
+                error={passwordError}
+                helperText={passwordErrorMessage}
+                name="confirmPassword"
+                placeholder="••••••"
+                type="confirmPassword"
+                id="confirmPassword"
+                autoComplete="current-password"
+                autoFocus
+                required
+                fullWidth
+                variant="outlined"
+                color={passwordError ? 'error' : 'primary'}
+              />
+            </FormControl>
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
             />
-            <ForgotPassword open={open} handleClose={handleClose} />
+            {/* <ForgotPassword open={open} handleClose={handleClose} /> */}
             <Button
               type="submit"
               fullWidth
@@ -195,7 +229,7 @@ export default function SignIn(props) {
               onClick={goToDashboard}
               color='primary'
             >
-              Sign in
+              Sign up
             </Button>
             <Link
               component="button"
@@ -228,7 +262,7 @@ export default function SignIn(props) {
             <Typography sx={{ textAlign: 'center' }}>
               Don&apos;t have an account?{' '}
               <Link
-                href="/signup"
+                href="/material-ui/getting-started/templates/sign-in/"
                 variant="body2"
                 sx={{ alignSelf: 'center' }}
               >

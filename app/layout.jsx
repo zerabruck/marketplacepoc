@@ -11,7 +11,7 @@ import "./css/tailwind-build.css";
 import "./css/tailwind.css";
 
 export const metadata = {
-  title: "Devjobs",
+  title: "Marketplace",
   description: "Platform to find your best matches to the companies",
 };
 

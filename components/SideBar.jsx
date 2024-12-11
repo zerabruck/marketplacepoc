@@ -5,11 +5,18 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import DescriptionIcon from '@mui/icons-material/Description';
 import LayersIcon from '@mui/icons-material/Layers';
-import { AppProvider, Navigation, Router } from '@toolpad/core/AppProvider';
+// import { AppProvider, Navigation, Router } from '@toolpad/core/AppProvider';
 import { DashboardLayout } from '@toolpad/core/DashboardLayout';
 import { PageContainer } from '@toolpad/core/PageContainer';
+import PersonIcon from '@mui/icons-material/Person';
+import ChatBubbleOutlineTwoToneIcon from '@mui/icons-material/ChatBubbleOutlineTwoTone';
 import Grid from '@mui/material/Grid2';
-
+import Chip from '@mui/material/Chip';
+import LogoutTwoToneIcon from '@mui/icons-material/LogoutTwoTone';
+import SecurityTwoToneIcon from '@mui/icons-material/SecurityTwoTone';
+import { useRouter } from "next/navigation";
+import { AppProvider } from '@toolpad/core/AppProvider';
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 const NAVIGATION = [
   {
     kind: 'header',
@@ -21,43 +28,66 @@ const NAVIGATION = [
     icon: <DashboardIcon />,
   },
   {
-    segment: 'orders',
-    title: 'Orders',
-    icon: <ShoppingCartIcon />,
+    segment: 'chat',
+    title: 'Chats',
+    icon: <ChatBubbleOutlineTwoToneIcon />,
+    action: <Chip label={2} color="primary" size="small" />,
+  },
+  {
+    segment: 'opportunity',
+    title: 'Opportunities',
+    icon: <PersonIcon />,
+    children: [
+      {
+        segment: 'listed',
+        title: 'Listed Opportunities',
+        icon: <SecurityTwoToneIcon />,
+      },
+      {
+        segment: 'linked',
+        title: 'Linked Opportunities',
+        icon: <LogoutTwoToneIcon />,
+      },
+    ],
   },
   {
     kind: 'divider',
   },
   {
     kind: 'header',
-    title: 'Analytics',
+    title: 'Account',
   },
   {
-    segment: 'reports',
-    title: 'Reports',
-    icon: <BarChartIcon />,
-    children: [
-      {
-        segment: 'sales',
-        title: 'Sales',
-        icon: <DescriptionIcon />,
-      },
-      {
-        segment: 'traffic',
-        title: 'Traffic',
-        icon: <DescriptionIcon />,
-      },
-    ],
+    segment: 'dashboard',
+    title: 'Security',
+    icon: <SecurityTwoToneIcon />,
   },
   {
-    segment: 'integrations',
-    title: 'Integrations',
-    icon: <LayersIcon />,
+    segment: 'landing',
+    title: 'Logout',
+    icon: <LogoutTwoToneIcon />,
   },
+  // {
+  //   segment: 'account',
+  //   title: 'Account',
+  //   icon: <PersonIcon />,
+  //   children: [
+  //     {
+  //       segment: 'security',
+  //       title: 'Security',
+  //       icon: <SecurityTwoToneIcon />,
+  //     },
+  //     {
+  //       segment: 'logout',
+  //       title: 'Logout',
+  //       icon: <LogoutTwoToneIcon />,
+  //     },
+  //   ],
+  // }
 ];
 
 const demoTheme = extendTheme({
-  colorSchemes: { light: true, dark: true },
+  colorSchemes: { light: true, dark: false },
   colorSchemeSelector: 'class',
   breakpoints: {
     values: {
@@ -92,19 +122,20 @@ const Skeleton = styled('div')(({ theme, height }) => ({
 }));
 
 export default function SideBar(props) {
-  const { window } = props;
+  const { window, path } = props;
 
-  const router = useDemoRouter('/dashboard');
+  // const router = useDemoRouter(`/${path}`);
+  const router = useRouter();
 
-  // Remove this const when copying and pasting into your project.
-  const demoWindow = window ? window() : undefined;
+  console.log(router);
+
 
   return (
+    <AppRouterCacheProvider  >
     <AppProvider
       navigation={NAVIGATION}
-      router={router}
+      // router={router}
       theme={demoTheme}
-      window={demoWindow}
       branding={{ 
         // src="./assets/logo/logo.png"
         logo: <div><img src="./assets/logo/logo.png" alt="MUI logo" className='w-[30px] h-fit'  /></div> ,
@@ -112,11 +143,12 @@ export default function SideBar(props) {
       }}
     >
       <DashboardLayout>
-        <PageContainer>
+        <PageContainer pathname={router.pathname}>
           
         {props.children}
         </PageContainer>
       </DashboardLayout>
     </AppProvider>
+    </AppRouterCacheProvider>
   );
 }

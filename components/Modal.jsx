@@ -9,8 +9,10 @@ export default function Modal({ children, modalClassName, bodyClassName, onClose
 
   const onDismiss = useCallback(() => {
     if (onClose) {
-      onClose();
+      console.log('router.chat')
+      router.push("/chat");
     } else {
+      console.log('router.back()')
       router.back();
     }
   }, [router])
@@ -46,7 +48,9 @@ export default function Modal({ children, modalClassName, bodyClassName, onClose
         ref={wrapper}
         className={"absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white " + bodyClassName}
       >
-        {children}
+        {children && typeof children === 'function' ? children({ onDismiss, router }) : children}
+
+        {/* {children} */}
       </div>
     </div>
   )
