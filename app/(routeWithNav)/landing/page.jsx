@@ -710,8 +710,7 @@ const MyNewPage = () => {
                     </div>
 
                     <p className="tw-mt-4 tw-text-gray-800 dark:tw-text-gray-200">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Beatae, vero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolore deleniti iusto Numquam!
+                    "This platform has transformed how we approach talent sourcing. We were able to find skilled professionals quickly and efficiently, saving us countless hours and resources."
                     </p>
                 </div>
 
@@ -738,8 +737,7 @@ const MyNewPage = () => {
                     </div>
 
                     <p className="tw-mt-4 tw-text-gray-800 dark:tw-text-gray-200">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Beatae, vero. Lorem ipsum dolor sit amet.
+                    "We’ve tapped into a pool of highly skilled professionals through this platform. It’s been instrumental in helping us grow."
                     </p>
                 </div>
 
@@ -766,7 +764,7 @@ const MyNewPage = () => {
                     </div>
 
                     <p className="tw-mt-4 tw-text-gray-800 dark:tw-text-gray-200">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, expedita nihil repellendus accusamus itaque facere labore, suscipit tempore in harum repellat. Doloribus, dolor facere dolorem impedit facilis rerum beatae exercitationem aliquid porro ea architecto similique illo omnis odio consequatur modi.
+                    "This platform has revolutionized our outsourcing workflow. The seamless process of finding the right talent has drastically reduced delays and inefficiencies. The professionals we've connected with consistently deliver high-quality work. It's streamlined our operations, allowing us to scale faster and exceed our targets with confidence."
                     </p>
                 </div>
 
@@ -793,8 +791,7 @@ const MyNewPage = () => {
                     </div>
 
                     <p className="tw-mt-4 tw-text-gray-800 dark:tw-text-gray-200">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Beatae, vero.
+                    "Reliable, efficient, and easy to use. This platform connects us with top-tier talent seamlessly."
                     </p>
                 </div>
 
@@ -821,8 +818,7 @@ const MyNewPage = () => {
                     </div>
 
                     <p className="tw-mt-4 tw-text-gray-800 dark:tw-text-gray-200">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Beatae, vero. Lorem, ipsum dolor.
+                    "Exceptional service and outstanding results. This platform is a game-changer for outsourcing needs."
                     </p>
                 </div>
 
@@ -849,8 +845,7 @@ const MyNewPage = () => {
                     </div>
 
                     <p className="tw-mt-4 tw-text-gray-800 dark:tw-text-gray-200">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, nihil vitae fuga ab reiciendis optio et corporis dolorem alias deserunt, molestias in iusto! Ratione, quisquam incidunt. Reprehenderit ipsam officiis enim.
-                    </p>
+                    "The platform revolutionized our workflow. Seamless integration, exceptional talent, and efficient communication channels make outsourcing effortless and productive!"                    </p>
                 </div>
                
             </div>

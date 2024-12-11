@@ -5,6 +5,7 @@ import {useFilteredJobs, useStore} from "../../store/store";
 import { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import SideBar from "@/components/SideBar";
+import SearchBar from "@/components/SearchBar";
 
 
 export default function Home() {
@@ -56,6 +57,191 @@ export default function Home() {
                         "name": "Tech Solutions Inc"
                     }
                 },
+                {
+                    "age": "January 2020",
+                    "estimatedRevenue": "$5,000,000",
+                    "industry": "FinTech",
+                    "workedWith": "Visa, PayPal, Stripe",
+                    "noOfEmployees": "300+",
+                    "_id": "661c57325ba08622bd6fdac2",
+                    "id": "8",
+                    "position": "Financial Data Analyst",
+                    "postedAt": "3d ago",
+                    "contract": "Full Time",
+                    "location": "New York, USA",
+                    "apply": "https://example.com/fintech-solutions/apply",
+                    "description": "FinTech Solutions Ltd. provides innovative financial technology outsourcing services, specializing in secure payment processing, fraud detection, and data-driven financial insights. Our mission is to empower businesses with cutting-edge financial solutions.",
+                    "requirements": {
+                      "content": "We seek a detail-oriented analyst with experience in financial data modeling and visualization tools like Tableau and Power BI.",
+                      "items": [
+                        "Analyze large datasets to provide actionable insights.",
+                        "Develop reports and dashboards for financial trends.",
+                        "Collaborate with engineers and product teams to optimize data workflows."
+                      ]
+                    },
+                    "role": {
+                      "content": "As a Financial Data Analyst, you will interpret data to drive key business decisions.",
+                      "items": [
+                        "Generate accurate reports based on financial data.",
+                        "Provide insights on market trends and customer behavior.",
+                        "Support strategic decision-making through data analysis."
+                      ]
+                    },
+                    "companyDetails": {
+                      "logo": "https://example.com/assets/logos/fintech.svg",
+                      "logoBackground": "hsl(220, 40%, 20%)",
+                      "website": "https://example.com/fintech-solutions",
+                      "name": "FinTech Solutions Ltd."
+                    }
+                  },
+                  {
+                    "age": "July 2017",
+                    "estimatedRevenue": "$8,000,000",
+                    "industry": "Cloud Computing",
+                    "workedWith": "AWS, Azure, IBM Cloud",
+                    "noOfEmployees": "600+",
+                    "_id": "661c58325ba08622bd6fdac3",
+                    "id": "9",
+                    "position": "Cloud Infrastructure Engineer",
+                    "postedAt": "5d ago",
+                    "contract": "Contract",
+                    "location": "Toronto, Canada",
+                    "apply": "https://example.com/cloudstream/apply",
+                    "description": "CloudStream Tech specializes in providing businesses with cloud infrastructure solutions. Our experts ensure reliable, scalable, and secure cloud services to support growth and innovation.",
+                    "requirements": {
+                      "content": "We are looking for an experienced cloud engineer proficient in AWS, Kubernetes, and Docker.",
+                      "items": [
+                        "Deploy and manage cloud-based infrastructure.",
+                        "Implement security best practices in cloud environments.",
+                        "Monitor system performance and ensure uptime."
+                      ]
+                    },
+                    "role": {
+                      "content": "You will build and maintain cloud solutions for enterprise clients.",
+                      "items": [
+                        "Design cloud architecture for scalability.",
+                        "Optimize cloud infrastructure for performance.",
+                        "Collaborate with DevOps teams to improve CI/CD pipelines."
+                      ]
+                    },
+                    "companyDetails": {
+                      "logo": "https://example.com/assets/logos/cloudstream.svg",
+                      "logoBackground": "hsl(210, 60%, 45%)",
+                      "website": "https://example.com/cloudstream",
+                      "name": "CloudStream Tech"
+                    }
+                  },
+                  {
+                    "age": "April 2022",
+                    "estimatedRevenue": "$2,000,000",
+                    "industry": "Artificial Intelligence",
+                    "workedWith": "OpenAI, Nvidia, Meta",
+                    "noOfEmployees": "200+",
+                    "_id": "661c59325ba08622bd6fdac4",
+                    "id": "10",
+                    "position": "AI Research Scientist",
+                    "postedAt": "1w ago",
+                    "contract": "Full Time",
+                    "location": "San Francisco, USA",
+                    "apply": "https://example.com/nova-ai/apply",
+                    "description": "Nova AI Solutions delivers state-of-the-art AI models and solutions for various industries, helping businesses harness the power of machine learning, NLP, and computer vision.",
+                    "requirements": {
+                      "content": "Looking for AI experts with experience in deep learning, PyTorch, and NLP.",
+                      "items": [
+                        "Develop and train AI models for real-world applications.",
+                        "Stay updated with the latest AI research and techniques.",
+                        "Deploy AI solutions at scale."
+                      ]
+                    },
+                    "role": {
+                      "content": "You will research, develop, and optimize AI models.",
+                      "items": [
+                        "Design algorithms for data analysis and predictions.",
+                        "Collaborate with product teams to integrate AI features.",
+                        "Publish findings and present research."
+                      ]
+                    },
+                    "companyDetails": {
+                      "logo": "https://example.com/assets/logos/nova-ai.svg",
+                      "logoBackground": "hsl(340, 70%, 50%)",
+                      "website": "https://example.com/nova-ai",
+                      "name": "Nova AI Solutions"
+                    }
+                  },
+                  {
+                    "age": "December 2015",
+                    "estimatedRevenue": "$10,000,000",
+                    "industry": "Cybersecurity",
+                    "workedWith": "Cisco, Fortinet, Palo Alto",
+                    "noOfEmployees": "800+",
+                    "_id": "661c5a325ba08622bd6fdac5",
+                    "id": "11",
+                    "position": "Cybersecurity Analyst",
+                    "postedAt": "4d ago",
+                    "contract": "Remote",
+                    "location": "London, UK",
+                    "apply": "https://example.com/edgecyber/apply",
+                    "description": "EdgeCyber Security offers top-tier cybersecurity services, ensuring businesses stay protected from evolving threats with comprehensive security solutions.",
+                    "requirements": {
+                      "content": "We need analysts skilled in threat detection, penetration testing, and incident response.",
+                      "items": [
+                        "Monitor networks for security breaches.",
+                        "Conduct vulnerability assessments and penetration tests.",
+                        "Develop and implement security policies."
+                      ]
+                    },
+                    "role": {
+                      "content": "You will ensure the security of client systems and networks.",
+                      "items": [
+                        "Analyze security incidents and provide solutions.",
+                        "Implement security measures and best practices.",
+                        "Educate clients on security protocols."
+                      ]
+                    },
+                    "companyDetails": {
+                      "logo": "https://example.com/assets/logos/edgecyber.svg",
+                      "logoBackground": "hsl(0, 0%, 20%)",
+                      "website": "https://example.com/edgecyber",
+                      "name": "EdgeCyber Security"
+                    }
+                  },
+                  {
+                    "age": "May 2018",
+                    "estimatedRevenue": "$3,500,000",
+                    "industry": "GreenTech",
+                    "workedWith": "Tesla, Siemens, Panasonic",
+                    "noOfEmployees": "400+",
+                    "_id": "661c5b325ba08622bd6fdac6",
+                    "id": "12",
+                    "position": "Sustainability Consultant",
+                    "postedAt": "2w ago",
+                    "contract": "Full Time",
+                    "location": "Amsterdam, Netherlands",
+                    "apply": "https://example.com/greentech/apply",
+                    "description": "GreenTech Innovations focuses on sustainable technology solutions, helping businesses reduce their environmental impact through innovative practices and consulting services.",
+                    "requirements": {
+                      "content": "We seek consultants with expertise in sustainability strategies and renewable energy solutions.",
+                      "items": [
+                        "Develop sustainability plans for clients.",
+                        "Analyze and optimize energy usage.",
+                        "Conduct environmental impact assessments."
+                      ]
+                    },
+                    "role": {
+                      "content": "You will help businesses implement sustainable practices.",
+                      "items": [
+                        "Create customized sustainability roadmaps.",
+                        "Advise on renewable energy initiatives.",
+                        "Collaborate with engineering teams for green solutions."
+                      ]
+                    },
+                    "companyDetails": {
+                      "logo": "https://example.com/assets/logos/greentech.svg",
+                      "logoBackground": "hsl(120, 50%, 40%)",
+                      "website": "https://example.com/greentech",
+                      "name": "GreenTech Innovations"
+                    }
+                  },
                 {
                     "_id": "661536725ba08622bd6fbbcf",
                     "id": "13",
@@ -562,11 +748,12 @@ export default function Home() {
     <div>
       {/* <Navbar/> */}
       <SideBar path='dashboard' >
+      <SearchBar/>
     <div className=" min-h-screen flex items-center flex-col lg:max-w-[90%] max-w-full md:px-8 md:py-4 sm:px-8 sm:py-3 mx-auto lg:mt-[-3rem] md:mt-[-3rem] sm:mt-[-2rem]">
-      <div className="pt-[3rem] "></div>
-      <FilterJobs />
+      {/* <div className="pt-[3rem] "></div> */}
+      {/* <FilterJobs /> */}
       {/* <div className="grid lg:gap-12 lg:grid-cols-3 place-content-center w-full mt-12 md:grid-cols-2 md:gap-3 gap-0 sm:grid-cols-1 mb-6"> */}
-      <div className="flex flex-col place-content-center w-full mt-12  mb-6">
+      <div className="flex flex-col place-content-center w-full   mb-6">
 
       {filtered && filtered.length ? filtered.map((item, id) => (
         <JobCardBase data={item} id={id} key={id} />

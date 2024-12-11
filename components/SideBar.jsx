@@ -34,6 +34,23 @@ const NAVIGATION = [
     action: <Chip label={2} color="primary" size="small" />,
   },
   {
+    segment: 'opportunity',
+    title: 'Opportunities',
+    icon: <PersonIcon />,
+    children: [
+      {
+        segment: 'listed',
+        title: 'Listed Opportunities',
+        icon: <SecurityTwoToneIcon />,
+      },
+      {
+        segment: 'linked',
+        title: 'Linked Opportunities',
+        icon: <LogoutTwoToneIcon />,
+      },
+    ],
+  },
+  {
     kind: 'divider',
   },
   {
