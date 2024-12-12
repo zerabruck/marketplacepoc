@@ -4,10 +4,10 @@ import LocationOnTwoToneIcon from '@mui/icons-material/LocationOnTwoTone';
 
 export default function JobCardBase(props) {
     return (
-        <div className="bg-white dark:bg-veryDarkBlue rounded-[6px] px-8 py-8 cursor-pointer  relative mt-8 sm:mx-auto w-full hover:transition-all hover:delay-100 hover:duration-500 hover:scale-110">
+        <div className="bg-white dark:bg-veryDarkBlue rounded-[6px] px-8 py-8 cursor-pointer  relative mt-8 sm:mx-auto w-full ">
             <Link href={`/jobs/${encodeURIComponent(props.data?.id)}`} key={props.id}>
-                <div className="h-[100px] w-[150px] rounded-[12px]  flex" style={{ backgroundColor: props.data?.companyDetails?.logoBackground }}>
-                    <Image className="items-center justify-center m-auto" src={props.data?.companyDetails?.logo} height={20} width={20} alt="logos" />
+                <div className="h-[100px] w-full overflow-hidden  rounded-md relative flex" style={{ backgroundColor: props.data?.companyDetails?.logoBackground }}>
+                    <Image className="transform transition-transform duration-300 hover:scale-110 items-center justify-center rounded-md m-auto object-cover" fill src={props.data?.companyDetails?.logo}   alt="logos" />
                 </div>
                 <p className=" hover:text-darkGrey font-bold mt-4 dark:text-white text-xl">{props.data?.companyDetails?.name}</p>
                 <div className="flex text-darkGrey font-base mt-2">

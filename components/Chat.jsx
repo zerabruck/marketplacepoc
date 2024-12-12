@@ -5,7 +5,7 @@ const ChatApplication = () => {
   const [messages, setMessages] = useState([
     {
       id: 1,
-      sender: "John Doe",
+      sender: "Dave lee",
       content: "Hey, how are you?",
       timestamp: "10:30 AM",
       avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
@@ -13,7 +13,7 @@ const ChatApplication = () => {
     {
       id: 2,
       sender: "Tech Solutions Inc",
-      avatar: "https://devjobs-fs.s3.ap-south-1.amazonaws.com/assets/logos/vector.svg",
+      avatar: "https://images.unsplash.com/photo-1570126618953-d437176e8c79?q=80&w=1994&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       content: "I'm good! How about you?",
       timestamp: "10:31 AM",
     }
@@ -24,7 +24,7 @@ const ChatApplication = () => {
       id: 1,
       title: "Project Proposal",
       description: "This is a sample project proposal for discussion.",
-      sender: "John Doe",
+      sender: "Dave lee",
       timestamp: "10:35 AM"
     }
   ]);
@@ -41,14 +41,14 @@ const ChatApplication = () => {
   const [activeUsers] = useState([
     {
       id: 1,
-      name: "John Doe",
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
+      name: "FinTech Solutions Ltd.",
+      avatar: "https://images.unsplash.com/photo-1709884735626-63e92727d8b6?q=80&w=1856&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       status: "online"
     },
     {
       id: 2,
-      sender: "Tech Solutions Inc",
-      avatar: "https://devjobs-fs.s3.ap-south-1.amazonaws.com/assets/logos/vector.svg",
+      name: "Tech Solutions Inc",
+      avatar: "https://images.unsplash.com/photo-1570126618953-d437176e8c79?q=80&w=1994&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       status: "online"
     }
   ]);
@@ -59,7 +59,7 @@ const ChatApplication = () => {
       const newMsg = {
         id: messages.length + 1,
         isProposal:false,
-        sender: "John Doe",
+        sender: "Dave lee",
         content: newMessage,
         timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
         avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
@@ -83,7 +83,7 @@ const ChatApplication = () => {
       const proposal = {
         id: proposals.length + 1,
         ...newProposal,
-        sender: "John Doe",
+        sender: "Dave lee",
         isProposal:true,
         timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })
       };
@@ -95,7 +95,7 @@ const ChatApplication = () => {
   };
 
   return (
-    <div className="flex w-full h-screen bg-gray-100">
+    <div className="flex w-full h-screen ">
       {/* Sidebar */}
       <div className="w-64  border-r border-gray-200 p-4">
         {/* <h2 className="text-xl font-bold mb-4">Active Chats</h2> */}
@@ -118,7 +118,7 @@ const ChatApplication = () => {
                 <img
                   src={user.avatar}
                   alt={user.name}
-                  className="w-10 h-10 rounded-full bg-black"
+                  className="w-10 h-10 rounded-full bg-blue-500"
                   onError={(e) => {
                     e.target.src = "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80";
                   }}
@@ -178,7 +178,7 @@ const ChatApplication = () => {
             :
             <div
               key={message.id}
-              className={`flex items-start space-x-2 ${message.sender === "John Doe" ? "flex-row-reverse space-x-reverse" : ""}`}
+              className={`flex items-start space-x-2 ${message.sender === "Dave lee" ? "flex-row-reverse space-x-reverse" : ""}`}
             >
               <img
                 src={message.avatar}
@@ -189,7 +189,7 @@ const ChatApplication = () => {
                 }}
               />
               <div
-                className={`max-w-md p-3 rounded-lg ${message.sender === "John Doe" ? "bg-blue-500 text-white" : "bg-gray-200"}`}
+                className={`max-w-md p-3 rounded-lg ${message.sender === "Dave lee" ? "bg-blue-500 text-white" : "bg-gray-200"}`}
               >
                 <p className="font-medium text-sm">{message.sender}</p>
                 <p>{message.content}</p>

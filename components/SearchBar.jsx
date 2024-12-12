@@ -1,7 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import {FaSearch } from "react-icons/fa";
-
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 const SearchBar = () => {
   const [searchFilters, setSearchFilters] = useState({
     keyword: "",
@@ -17,6 +18,7 @@ const SearchBar = () => {
   const countries = ["United States", "United Kingdom", "Canada", "Australia", "Germany", "France"];
   const providerTypes = ["Consultant", "Agency", "Freelancer", "Corporation", "Startup"];
   const companySizes = ["1-10", "11-50", "51-200", "201-500", "500+"];
+  const [showFilters, setShowFilters] = useState(false);
 
   const handleProviderTypeChange = (type) => {
     setSearchFilters(prev => ({
@@ -29,25 +31,32 @@ const SearchBar = () => {
 
  
   return (
-    <div className="container mx-auto px-4 py-1">
-    <div className="bg-white p-6 rounded-lg shadow-md mb-8">
+    <div className="w-2/3  mx-auto px-4 py-1">
+    <div className="bg-white  rounded-lg shadow-md mb-8">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {/* Keyword Search */}
-        <div className="col-span-full">
-          <div className="relative">
+        <div className="col-span-full border-b flex justify-between items-center">
+          <div className="relative  w-full">
             <input
               type="text"
               placeholder="Enter Keywords"
-              className="w-full p-3 pr-10 border rounded-lg"
+              className="w-full p-3 pr-10  rounded-lg outline-none"
               value={searchFilters.keyword}
               onChange={(e) => setSearchFilters({...searchFilters, keyword: e.target.value})}
             />
-            <FaSearch className="absolute right-3 top-3.5 text-gray-400" />
+            {/* <FaSearch className="absolute right-3 top-3.5 text-gray-400" /> */}
           </div>
+          {
+            showFilters ? <KeyboardArrowUpIcon className="text-[3rem] cursor-pointer text-blue-400" onClick={() => setShowFilters(false)}/> : <KeyboardArrowDownIcon className="text-[3rem] cursor-pointer text-blue-400" onClick={() => setShowFilters(true)}/>
+          }
+        
         </div>
+        {
+          showFilters &&
+        <>
 
         {/* Partnership and Financing */}
-        <div className="flex space-x-4">
+        <div className="flex px-6  space-x-4">
           <label className="flex items-center space-x-2">
             <input
               type="checkbox"
@@ -59,7 +68,7 @@ const SearchBar = () => {
           </label>
         </div>
 
-        <div className="flex space-x-4">
+        <div className="flex   px-6 space-x-4">
           <label className="flex items-center space-x-2">
             <input
               type="checkbox"
@@ -72,7 +81,7 @@ const SearchBar = () => {
         </div>
 
         {/* Categories Dropdown */}
-        <div>
+        <div className="px-6">
           <select
             className="w-full p-2 border rounded-lg"
             value={searchFilters.category}
@@ -86,7 +95,7 @@ const SearchBar = () => {
         </div>
 
         {/* Country Dropdown */}
-        <div>
+        <div className="px-6">
           <select
             className="w-full p-2 border rounded-lg"
             value={searchFilters.country}
@@ -100,7 +109,7 @@ const SearchBar = () => {
         </div>
 
         {/* Company Size Dropdown */}
-        <div>
+        <div className="px-6">
           <select
             className="w-full p-2 border rounded-lg"
             value={searchFilters.companySize}
@@ -114,7 +123,7 @@ const SearchBar = () => {
         </div>
 
         {/* Provider Types Multi-select */}
-        <div className="col-span-full">
+        <div className="col-span-full px-6 pb-3">
           <p className="mb-2 font-medium">Provider Types</p>
           <div className="flex flex-wrap gap-4">
             {providerTypes.map((type) => (
@@ -130,6 +139,9 @@ const SearchBar = () => {
             ))}
           </div>
         </div>
+
+        </>
+        }
       </div>
     </div>
     </div>

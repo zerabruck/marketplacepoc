@@ -51,12 +51,49 @@ export default function Home() {
                         ]
                     },
                     "companyDetails": {
-                        "logo": "https://devjobs-fs.s3.ap-south-1.amazonaws.com/assets/logos/vector.svg",
+                        "logo": "https://images.unsplash.com/photo-1570126618953-d437176e8c79?q=80&w=1994&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                         "logoBackground": "hsl(235, 10%, 23%)",
                         "website": "https://example.com/vector",
                         "name": "Tech Solutions Inc"
                     }
                 },
+                {
+                    "age": "July 2017",
+                    "estimatedRevenue": "$8,000,000",
+                    "industry": "Cloud Computing",
+                    "workedWith": "AWS, Azure, IBM Cloud",
+                    "noOfEmployees": "600+",
+                    "_id": "661c58325ba08622bd6fdac3",
+                    "id": "9",
+                    "position": "Cloud Infrastructure Engineer",
+                    "postedAt": "5d ago",
+                    "contract": "Contract",
+                    "location": "Toronto, Canada",
+                    "apply": "https://example.com/cloudstream/apply",
+                    "description": "CloudStream Tech specializes in providing businesses with cloud infrastructure solutions. Our experts ensure reliable, scalable, and secure cloud services to support growth and innovation.",
+                    "requirements": {
+                      "content": "We are looking for an experienced cloud engineer proficient in AWS, Kubernetes, and Docker.",
+                      "items": [
+                        "Deploy and manage cloud-based infrastructure.",
+                        "Implement security best practices in cloud environments.",
+                        "Monitor system performance and ensure uptime."
+                      ]
+                    },
+                    "role": {
+                      "content": "You will build and maintain cloud solutions for enterprise clients.",
+                      "items": [
+                        "Design cloud architecture for scalability.",
+                        "Optimize cloud infrastructure for performance.",
+                        "Collaborate with DevOps teams to improve CI/CD pipelines."
+                      ]
+                    },
+                    "companyDetails": {
+                      "logo": "https://devjobs-fs.s3.ap-south-1.amazonaws.com/assets/logos/crowdfund.svg",
+                      "logoBackground": "hsl(210, 60%, 45%)",
+                      "website": "https://example.com/cloudstream",
+                      "name": "CloudStream Tech"
+                    }
+                  },
                 {
                     "age": "January 2020",
                     "estimatedRevenue": "$5,000,000",
@@ -88,49 +125,13 @@ export default function Home() {
                       ]
                     },
                     "companyDetails": {
-                      "logo": "https://example.com/assets/logos/fintech.svg",
+                      "logo": "https://images.unsplash.com/photo-1709884735626-63e92727d8b6?q=80&w=1856&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                       "logoBackground": "hsl(220, 40%, 20%)",
                       "website": "https://example.com/fintech-solutions",
                       "name": "FinTech Solutions Ltd."
                     }
                   },
-                  {
-                    "age": "July 2017",
-                    "estimatedRevenue": "$8,000,000",
-                    "industry": "Cloud Computing",
-                    "workedWith": "AWS, Azure, IBM Cloud",
-                    "noOfEmployees": "600+",
-                    "_id": "661c58325ba08622bd6fdac3",
-                    "id": "9",
-                    "position": "Cloud Infrastructure Engineer",
-                    "postedAt": "5d ago",
-                    "contract": "Contract",
-                    "location": "Toronto, Canada",
-                    "apply": "https://example.com/cloudstream/apply",
-                    "description": "CloudStream Tech specializes in providing businesses with cloud infrastructure solutions. Our experts ensure reliable, scalable, and secure cloud services to support growth and innovation.",
-                    "requirements": {
-                      "content": "We are looking for an experienced cloud engineer proficient in AWS, Kubernetes, and Docker.",
-                      "items": [
-                        "Deploy and manage cloud-based infrastructure.",
-                        "Implement security best practices in cloud environments.",
-                        "Monitor system performance and ensure uptime."
-                      ]
-                    },
-                    "role": {
-                      "content": "You will build and maintain cloud solutions for enterprise clients.",
-                      "items": [
-                        "Design cloud architecture for scalability.",
-                        "Optimize cloud infrastructure for performance.",
-                        "Collaborate with DevOps teams to improve CI/CD pipelines."
-                      ]
-                    },
-                    "companyDetails": {
-                      "logo": "https://example.com/assets/logos/cloudstream.svg",
-                      "logoBackground": "hsl(210, 60%, 45%)",
-                      "website": "https://example.com/cloudstream",
-                      "name": "CloudStream Tech"
-                    }
-                  },
+                 
                   {
                     "age": "April 2022",
                     "estimatedRevenue": "$2,000,000",
@@ -162,7 +163,7 @@ export default function Home() {
                       ]
                     },
                     "companyDetails": {
-                      "logo": "https://example.com/assets/logos/nova-ai.svg",
+                      "logo": "https://devjobs-fs.s3.ap-south-1.amazonaws.com/assets/logos/mastercraft.svg",
                       "logoBackground": "hsl(340, 70%, 50%)",
                       "website": "https://example.com/nova-ai",
                       "name": "Nova AI Solutions"
@@ -199,7 +200,7 @@ export default function Home() {
                       ]
                     },
                     "companyDetails": {
-                      "logo": "https://example.com/assets/logos/edgecyber.svg",
+                      "logo": "https://devjobs-fs.s3.ap-south-1.amazonaws.com/assets/logos/pod.svg",
                       "logoBackground": "hsl(0, 0%, 20%)",
                       "website": "https://example.com/edgecyber",
                       "name": "EdgeCyber Security"
@@ -236,10 +237,10 @@ export default function Home() {
                       ]
                     },
                     "companyDetails": {
-                      "logo": "https://example.com/assets/logos/greentech.svg",
+                      "logo": "https://devjobs-fs.s3.ap-south-1.amazonaws.com/assets/logos/pomodoro.svg",
                       "logoBackground": "hsl(120, 50%, 40%)",
                       "website": "https://example.com/greentech",
-                      "name": "GreenTech Innovations"
+                      "name": "Pomodoro Innovations"
                     }
                   },
                 {

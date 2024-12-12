@@ -1,22 +1,18 @@
 import * as React from 'react';
 import { extendTheme, styled } from '@mui/material/styles';
 import DashboardIcon from '@mui/icons-material/Dashboard';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import BarChartIcon from '@mui/icons-material/BarChart';
-import DescriptionIcon from '@mui/icons-material/Description';
-import LayersIcon from '@mui/icons-material/Layers';
-// import { AppProvider, Navigation, Router } from '@toolpad/core/AppProvider';
 import { DashboardLayout } from '@toolpad/core/DashboardLayout';
 import { PageContainer } from '@toolpad/core/PageContainer';
-import PersonIcon from '@mui/icons-material/Person';
 import ChatBubbleOutlineTwoToneIcon from '@mui/icons-material/ChatBubbleOutlineTwoTone';
-import Grid from '@mui/material/Grid2';
 import Chip from '@mui/material/Chip';
 import LogoutTwoToneIcon from '@mui/icons-material/LogoutTwoTone';
 import SecurityTwoToneIcon from '@mui/icons-material/SecurityTwoTone';
 import { useRouter } from "next/navigation";
 import { AppProvider } from '@toolpad/core/AppProvider';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
+import ViewListIcon from '@mui/icons-material/ViewList';
+import LeakAddIcon from '@mui/icons-material/LeakAdd';
 const NAVIGATION = [
   {
     kind: 'header',
@@ -36,17 +32,17 @@ const NAVIGATION = [
   {
     segment: 'opportunity',
     title: 'Opportunities',
-    icon: <PersonIcon />,
+    icon: <BarChartIcon />,
     children: [
       {
         segment: 'listed',
         title: 'Listed Opportunities',
-        icon: <SecurityTwoToneIcon />,
+        icon: <ViewListIcon />,
       },
       {
         segment: 'linked',
         title: 'Linked Opportunities',
-        icon: <LogoutTwoToneIcon />,
+        icon: <LeakAddIcon />,
       },
     ],
   },
@@ -143,7 +139,7 @@ export default function SideBar(props) {
       }}
     >
       <DashboardLayout>
-        <PageContainer pathname={router.pathname}>
+        <PageContainer className='' pathname={router.pathname}>
           
         {props.children}
         </PageContainer>

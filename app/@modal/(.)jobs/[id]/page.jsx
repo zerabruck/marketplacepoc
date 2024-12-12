@@ -31,7 +31,7 @@ export default function JobModal({ params }) {
             <div className="px-12 pt-8">
                 <div className="flex bg-white w-full rounded-[6px]">
                     <div className="w-[140px] h-[140px] flex items-center relative" style={{ backgroundColor: job.companyDetails?.logoBackground }}>
-                        <Image src={job?.companyDetails?.logo} alt="company logo" className="m-auto " height={50} width={50} />
+                        <Image src={job?.companyDetails?.logo} alt="company logo" fill className="m-auto object-contain"  />
                     </div>
                     <div className="flex lg:flex-row items-center justify-between lg:py-8 lg:px-12 w-full sm:flex-col sm:items-start sm:p-0 sm:pl-4">
                         <div>
