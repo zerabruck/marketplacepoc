@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FiSend, FiEdit2, FiDownload, FiX, FiPlus, FiSearch } from "react-icons/fi";
+import { FaCalendarAlt, FaDollarSign } from "react-icons/fa";
 
 const ChatApplication = () => {
   const [messages, setMessages] = useState([
@@ -35,7 +36,10 @@ const ChatApplication = () => {
 
   const [newProposal, setNewProposal] = useState({
     title: "",
-    description: ""
+    description: "",
+    budget: "",
+    openingDate: "",
+    closingDate: ""
   });
 
   const [activeUsers] = useState([
@@ -76,6 +80,13 @@ const ChatApplication = () => {
   const handleDownloadProposal = (id) => {
     console.log("Downloading proposal:", id);
   };
+  const formatDate = (dateString) => {
+    return new Date(dateString).toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric"
+    });
+  };
 
   const handleCreateProposal = (e) => {
     e.preventDefault();
@@ -89,13 +100,15 @@ const ChatApplication = () => {
       };
       setMessages([...messages, proposal]);
       // setNewMessage("");
-      setNewProposal({ title: "", description: "" });
+      console.log("New Messages:", messages);
+      console.log("New Proposal:", proposal);
+      setNewProposal({ title: "", description: "", budget: "", openingDate: "", closingDate: "" });
       setShowProposalModal(false);
     }
   };
 
   return (
-    <div className="flex w-full h-screen ">
+    <div className="flex w-full h-screen bg-white ">
       {/* Sidebar */}
       <div className="w-64  border-r border-gray-200 p-4">
         {/* <h2 className="text-xl font-bold mb-4">Active Chats</h2> */}
@@ -153,6 +166,19 @@ const ChatApplication = () => {
               <div className="flex justify-between items-start">
                 <div>
                   <h4 className="font-bold">{message.title}</h4>
+                  <div className="flex items-center text-gray-600 mb-3">
+                  <FaDollarSign className="mr-2" />
+                  <span className="font-medium">{message.budget}</span>
+                </div>
+                <div className="flex items-center text-gray-600 mb-4">
+                  <FaCalendarAlt className="mr-2" />
+                  <span>Opens on {formatDate(message.openingDate)}</span>
+                </div>
+
+                <div className="flex items-center text-gray-600 mb-4">
+                  <FaCalendarAlt className="mr-2" />
+                  <span>Closes on {formatDate(message.closingDate)}</span>
+                </div>
                   <p className="text-gray-600">{message.description}</p>
                   <p className="text-sm text-gray-500">
                     {message.sender} - {message.timestamp}
@@ -199,10 +225,9 @@ const ChatApplication = () => {
             
           ))}
 
-          {/* Proposals Section */}
           
         </div>
-        <form onSubmit={handleSendMessage} className="p-4 sticky bottom-0 bg-gray-100 border-t">
+        <form onSubmit={handleSendMessage} className="p-4 sticky bottom-0 bg-white border-t">
           <div className="flex space-x-4">
           <button
                 onClick={() => setShowProposalModal(true)}
@@ -250,6 +275,35 @@ const ChatApplication = () => {
                 />
               </div>
               <div>
+              <label className="block text-gray-700 mb-2">Budget*</label>
+              <select 
+              defaultValue=''
+              value={newProposal.budget}
+                  onChange={(e) => setNewProposal({ ...newProposal, budget: e.target.value })}
+                  className="w-full p-2 border rounded-md">
+                <option value="10000">$10,000</option>
+                <option value="25000">$25,000</option>
+                <option value="50000">$50,000</option>
+                <option value="100000">$100,000+</option>
+              </select>
+            </div>
+            <div>
+              <label className="block text-gray-700 mb-2">Opening Date*</label>
+              <input 
+              type="date"
+              value={newProposal.openingDate}
+              onChange={(e) => setNewProposal({ ...newProposal, openingDate: e.target.value })}
+               className="w-full p-2 border rounded-md" />
+            </div>
+            <div>
+              <label className="block text-gray-700 mb-2">Closing Date*</label>
+              <input 
+              type="date"
+              value={newProposal.closingDate}
+              onChange={(e) => setNewProposal({ ...newProposal, closingDate: e.target.value })}
+              className="w-full p-2 border rounded-md" />
+            </div>
+              <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Description</label>
                 <textarea
                   value={newProposal.description}
@@ -270,7 +324,7 @@ const ChatApplication = () => {
                   type="submit"
                   className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
-                  Create Proposal
+                  Create Offer
                 </button>
               </div>
             </form>

@@ -7,7 +7,7 @@ import { PageContainer } from '@toolpad/core/PageContainer';
 import ChatBubbleOutlineTwoToneIcon from '@mui/icons-material/ChatBubbleOutlineTwoTone';
 import Chip from '@mui/material/Chip';
 import LogoutTwoToneIcon from '@mui/icons-material/LogoutTwoTone';
-import SecurityTwoToneIcon from '@mui/icons-material/SecurityTwoTone';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { useRouter } from "next/navigation";
 import { AppProvider } from '@toolpad/core/AppProvider';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
@@ -54,9 +54,9 @@ const NAVIGATION = [
     title: 'Account',
   },
   {
-    segment: 'dashboard',
-    title: 'Security',
-    icon: <SecurityTwoToneIcon />,
+    segment: 'account',
+    title: 'Account',
+    icon: <AccountCircleIcon />,
   },
   {
     segment: 'landing',
